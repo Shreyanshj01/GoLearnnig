@@ -6,7 +6,7 @@ import (
 	"github.com/RichardKnop/machinery/v1"
 	"github.com/urfave/cli"
 
-	"go-machinery/server"
+	"go-machinery/mux_server"
 	"go-machinery/utils"
 	"go-machinery/worker"
 )
@@ -27,7 +27,7 @@ func main() {
 			Name:  "server",
 			Usage: "Run the server that takes task input",
 			Action: func(c *cli.Context) {
-				server.StartServer(taskserver)
+				mux_server.StartServer(taskserver)
 			},
 		},
 		{
